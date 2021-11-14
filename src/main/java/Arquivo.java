@@ -19,7 +19,7 @@ public class Arquivo {
 
             if(i == true){
                 bw.write("Identificador" + "," + "Filhos" + "," + "Salario" + "\n");
-                i = false
+                i = false;
             }
             bw.write(s1.getIdent() + ",");
             bw.write(s1.getFilhos() + ",");
