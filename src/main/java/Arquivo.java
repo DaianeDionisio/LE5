@@ -2,6 +2,8 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Arquivo {
+    
+    static boolean i = true;
 
     public void escrever(Funcionario s1) {
 
@@ -10,26 +12,14 @@ public class Arquivo {
         BufferedWriter bw = null;
         String linhaEscrever;
 
-        //sera necessario ler o arquivo para verificar quando ele esta em branco e inserir o cabeçalho
-        InputStream is = null;
-        InputStreamReader isr = null;
-        BufferedReader br = null;
-        ArrayList<Funcionario> acheiNoArquivo = new ArrayList<>();
-        String linhaLer;
-
         try {
             os = new FileOutputStream("func_filtrado.csv", true);
             osr = new OutputStreamWriter(os);
             bw = new BufferedWriter(osr);
 
-            is = new FileInputStream("func_filtrado.csv");
-            isr = new InputStreamReader(is);
-            br = new BufferedReader(isr);
-
-            linhaLer = br.readLine();
-
-            if(linhaLer == null){
+            if(i == true){
                 bw.write("Identificador" + "," + "Filhos" + "," + "Salario" + "\n");
+                i = false
             }
             bw.write(s1.getIdent() + ",");
             bw.write(s1.getFilhos() + ",");

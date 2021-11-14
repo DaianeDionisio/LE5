@@ -8,7 +8,7 @@ public class Funcionario implements Comparable<Funcionario> {
     public int getFilhos() { return filhos; }
     public float getSalario() { return salario; }
 
-    public void setIdent(int ident) { this.ident = ident }
+    public void setIdent(int ident) { this.ident = ident; }
     public void setFilhos(int filhos) {
         this.filhos = filhos;
     }
