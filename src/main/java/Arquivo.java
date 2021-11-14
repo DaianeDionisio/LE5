@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Arquivo {
-    
+
     static boolean i = true;
 
     public void escrever(Funcionario s1) {
