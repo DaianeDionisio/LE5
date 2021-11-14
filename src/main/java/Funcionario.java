@@ -9,9 +9,7 @@ public class Funcionario implements Comparable<Funcionario> {
     public float getSalario() { return salario; }
 
     public void setIdent(int ident) { this.ident = ident }
-    public void setFilhos(int filhos) {
-        this.filhos = filhos;
-    }
+    public void setFilhos(int filhos) { this.filhos = filhos; }
     public void setSalario(float salario) {this.salario = salario; }
 
     @Override
